@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  CatsPhotosApp
+
+  Created by Yulia on 15.10.2021.
+  
+*/
+
+"main_screen" = "Главный экран";
+"favorites" = "Избранное";
+"saved" = "Сохранено!";
+"image_added_to_favorites" = "Изображение добавлено в избранное.";
+"save_error" = "Ошибка сохранения!";
+"image_saved_in_photo" = "Изображение было сохранено в ваших фотографиях.";
+"image_deleted" = "Изображение удалено.";
+"save_photo" = "Скачать фото";
+"add_to_favorites" = "Добавить в избранное";
+"remove_form_favorites" = "Удалить из избранного";

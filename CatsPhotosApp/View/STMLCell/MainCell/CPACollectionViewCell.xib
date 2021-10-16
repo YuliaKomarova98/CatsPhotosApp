@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CPACollectionViewCell" customModule="CatsPhotosApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="231" height="158"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="231" height="158"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDl-wy-Mre">
+                        <rect key="frame" x="0.0" y="0.0" width="231" height="158"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aGV-bn-zeA">
+                                <rect key="frame" x="0.0" y="0.0" width="231" height="158"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aGV-bn-zeA" firstAttribute="top" secondItem="cDl-wy-Mre" secondAttribute="top" id="GiY-gg-dAQ"/>
+                            <constraint firstAttribute="trailing" secondItem="aGV-bn-zeA" secondAttribute="trailing" id="VDV-wX-0eK"/>
+                            <constraint firstAttribute="bottom" secondItem="aGV-bn-zeA" secondAttribute="bottom" id="bV3-Gl-VyL"/>
+                            <constraint firstItem="aGV-bn-zeA" firstAttribute="leading" secondItem="cDl-wy-Mre" secondAttribute="leading" id="fV5-gh-ZQI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="cDl-wy-Mre" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3HY-sC-CUl"/>
+                <constraint firstItem="cDl-wy-Mre" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="V4m-Cv-UGG"/>
+                <constraint firstAttribute="bottom" secondItem="cDl-wy-Mre" secondAttribute="bottom" id="bIi-mX-UMp"/>
+                <constraint firstAttribute="trailing" secondItem="cDl-wy-Mre" secondAttribute="trailing" id="uiB-nH-2JM"/>
+            </constraints>
+            <size key="customSize" width="231" height="158"/>
+            <connections>
+                <outlet property="bgView" destination="cDl-wy-Mre" id="NCS-N3-eOs"/>
+                <outlet property="imgeView" destination="aGV-bn-zeA" id="bIZ-c0-ccO"/>
+            </connections>
+            <point key="canvasLocation" x="268.84057971014494" y="25.446428571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

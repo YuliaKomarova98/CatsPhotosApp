@@ -1,0 +1,18 @@
+
+/* Class = "UITabBarItem"; title = "Избранное"; ObjectID = "MAY-wN-b8D"; */
+"MAY-wN-b8D.title" = "Favorites";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Vbd-hg-xfj"; */
+"Vbd-hg-xfj.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "d1c-yH-sV7"; */
+"d1c-yH-sV7.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ej8-g3-rxn"; */
+"ej8-g3-rxn.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "voC-bB-AhL"; */
+"voC-bB-AhL.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Главный экран"; ObjectID = "zi2-V9-Rpr"; */
+"zi2-V9-Rpr.title" = "Main screen";
