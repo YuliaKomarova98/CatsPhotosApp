@@ -11,7 +11,7 @@ class CPACatsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var presenter = CPAPresenter()
+    private let presenter = CPAPresenter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +51,7 @@ extension CPACatsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard indexPath.row < presenter.numberOfrows - 1 else {
+        guard indexPath.row < presenter.lastCell else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CPAConstants.STMFetchCollectionViewCell, for: indexPath)
             presenter.fetchData()
             return cell

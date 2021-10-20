@@ -11,5 +11,6 @@ import UIKit
 struct CPACatsModel: Codable {
     let id: String
     let url: String
-    let width, height: Int
+    let width: Int
+    let height: Int
 }

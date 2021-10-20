@@ -11,14 +11,16 @@ import Combine
 protocol CPANetworManagerType {
     var page: Int { get }
     var itemPerPage: Int { get set }
-    func loadData(completion: @escaping(_ cats: [CPACatsModel]?, _ error: String?) -> Void)
     func fetchData(completion: @escaping(_ cats: [CPACatsModel]?, _ error: String?) -> Void)
 }
 
-extension CPANetworManagerType {
-    func loadData(completion: @escaping(_ cats: [CPACatsModel]?, _ error: String?) -> Void) {
-        guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=\(itemPerPage)&page=\(page)&order=DESK") else { return }
+class CPANetworkManager: CPANetworManagerType {
+    private(set) var page: Int = 1
 
+    var itemPerPage: Int = 20
+    
+    func fetchData(completion: @escaping ([CPACatsModel]?, String?) -> Void) {
+        guard let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=\(itemPerPage)&page=\(page)&order=DESK") else { return }
 
         let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in
@@ -29,22 +31,10 @@ extension CPANetworManagerType {
                     return
                 }
 
-                let apiResponse = try! JSONDecoder().decode([CPACatsModel].self, from: data)
+                let apiResponse = try? JSONDecoder().decode([CPACatsModel].self, from: data)
                 completion(apiResponse, nil)
-
             }
-
         }.resume()
-    }
-}
-
-class CPANetworkManager: CPANetworManagerType {
-    func fetchData(completion: @escaping ([CPACatsModel]?, String?) -> Void) {
         page += 1
-        loadData(completion: completion)
     }
-
-    private(set) var page: Int = 0
-
-    var itemPerPage: Int = 20
 }

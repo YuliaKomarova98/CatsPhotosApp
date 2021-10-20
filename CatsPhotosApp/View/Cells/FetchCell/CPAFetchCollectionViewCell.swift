@@ -9,9 +9,4 @@ import UIKit
 
 class CPAFetchCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
 }

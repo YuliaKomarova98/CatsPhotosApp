@@ -74,6 +74,6 @@ extension CPAFavoritesViewController: UICollectionViewDataSource {
 
 extension CPAFavoritesViewController: CustomLayoutDelegate {
   func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
-      return 200
+      return CGFloat(CPAConstants.heightCell)
   }
 }
